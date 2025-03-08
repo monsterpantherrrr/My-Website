@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF -8">
+    <meta name="viewport" content="width=device-widthinitial-scale=1.0">
+    <title>Main Wd</title>
+    <style>
+    /* *{
+      margin: 0;
+      padding: 0;
+    } */
+    @import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');
+        body {
+          background-color:#abc;
+        }
+        *{
+          font-family: "Splash", cursive;
+          font-weight: 400;
+          font-style: normal;
+        }
+        h1{
+          color:red;
+        }
+        h2{
+          color:green;
+        }
+        mark{
+          /* background-color: blue; */
+          color: red;
+        }
+    </style>
+    
+</head>
+<body>
+  <div class="container">
+    <div class="eye">
+      <div class="pupil"></div>
+    </div>
+    <div class="eye">
+      <div class="pupil"></div>
+    </div>
+  </div>
+  <h1>Home</h1>
+  <p>
+    <strong>Battlegrounds Mobile India</strong> (abbreviated <b>BGMI</b>) is an online multiplayer mobile battle royale for <i>Indian players</i>, developed and published by <em>KRAFTON</em>.<br>It was released on July 2nd, 2021 for <mark>Android platforms</mark> and August 18th, 2021 for iOS platforms.</p><hr>
+  <!-- Button starts -->
+  <style>
+    button{
+      display: inline-block;
+      background-color: #ff3f3f;
+      color: #fff;
+      font-size: 23px;
+      margin: 5px;
+      padding: 10px 50px;
+      border-radius: 20px;
+      box-shadow: 4px 4px 0px #53585b;
+      transition: all 0.3s ease;
+    }
+    .btn:hover{
+      background-color: #ff8686;
+    }
+    .btn:active{
+      background-color: #6cd985;
+      box-shadow: none;
+      transform: translateY(5px);
+    }
+  </style>
+  <div>
+    <a href="Web-Aman.html">
+      <button class="btn">
+        Go to
+      </button>
+    </a>
+  </div>
+  <!-- Button Ends -->
+  <hr>
+  <div>
+    <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.battlegroundsmobileindia.com/&ved=2ahUKEwjoxrLN2-aJAxXMka8BHVQgKXAQFnoECBsQAQ&usg=AOvVaw1wS9SYb38WnnNBUX_KQ7Hn">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC9wWpb5UZKG-sOMK0Kkgdy8-3tCCr7Yut-g&usqp=CAU" width="350"></a><hr></div>
+  <div><h2>User Detail</h2>
+  <table border="2" width="300" height="200" >
+    <tr><th>Name</th><th>Phone</th><th>Rate</th></tr>
+    <tr align="center"><td>Karan</td><td>Vivo</td><td><s>13,500</s>; 15,000</td></tr>
+    <tr align="center"><td>Raj</td><td>Realme</td><td><del>18,000</del>; 20,000</td></tr>
+  </table></div>
+  <hr>
+  <div>
+    <img src="https://picsum.photos/300/300?" alt="Random">
+    <img src="https://cataas.com/cat" width="300">
+    <img src="https://picsum.photos/300/300.jpg" alt="">
+  </div>
+  <div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg" width="300">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg" width="300">
+    <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" width="300">
+  </div>
+  <hr>
+  <input type="number">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur  quam libero eveniet in, nulla harum incidunt sint at neque consequatur iusto quibusdam ipsum ea ab officia nisi cumque deserunt molestiae itaque tempora quod. Neque, quibusdam.
+  </p>
+  <a href="India.html">
+  <button class="btn">
+        Submit
+      </button>
+  </a>
+  <br>
+  
+    <style>
+    .container {
+      display: flex;
+      opacity: 80%;
+      justify-content: center;
+      align-items: center;
+      min-height: 10vh;
+      position: ;
+      border: 2px solid #000;
+      z-index: 10;
+    }
+    .eye {
+      position: relative;
+      height: 80px;
+      width: 80px;
+      background-color: #fff;
+      margin: 0 20px;
+      border-radius: 50%;
+      box-shadow: 0 5px 45px rgba(0, 0, 0, 0.2), inset 0 0 15px #767574, inset 0 0 15px #767574;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .pupil {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: rgb(40,140,220);
+      border-radius: 50%;
+      border: 1px solid #000;
+      transition: transform 0.05s linear;
+    }
+  </style>
+  <script>
+    document.addEventListener("mousemove", (event) => {
+      const eyes = document.querySelectorAll(".eye");
+      eyes.forEach((eye) => {
+        const pupil = eye.querySelector(".pupil");
+        const bounds = eye.getBoundingClientRect();
+        const eyeCenterX = bounds.left + bounds.width / 2;
+        const eyeCenterY = bounds.top + bounds.height / 2;
+        const dx = event.clientX - eyeCenterX;
+        const dy = event.clientY - eyeCenterY;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        
+        // Limit pupil movement within eye boundary
+        const maxMove = 20;
+        const angle = Math.atan2(dy, dx);
+        const moveX = Math.cos(angle) * Math.min(distance, maxMove);
+        const moveY = Math.sin(angle) * Math.min(distance, maxMove);
+        pupil.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      });
+    });
+  </script>
+</body>
+</html>
+
+
