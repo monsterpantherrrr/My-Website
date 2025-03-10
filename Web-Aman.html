@@ -161,9 +161,7 @@
         <iframe width="207" height="360" src="https://www.youtube.com/embed/j0AIhYJV1hc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
       <hr>
-  <div>
-    <h1>Plz copy me!</h1>
-  </div>
+  
       <hr>
       <div>
         <iframe width="368" height="207" src="https://www.youtube.com/embed/Zrt77f7nTqY?si=WJRFxKBvBFMYd2SA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -187,78 +185,7 @@
   </details>
   <h2>Donation</h2>
   <img src="UPI.jpg" width="200">
-<script>
-  document.addEventListener("copy", (event) =>  {
-    const selectedData = window.getSelection().toString();
-    event.clipboardData.setData(
-      "text/plain",
-      "Mera Lauda le Bhosdi k 🖕 "
-    );
-    event.preventDefault();
-  });
-</script>
 
-
-  <style>
-    .container {
-      display: flex;
-      opacity: 80%;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      
-    }
-    .eye {
-      position: relative;
-      height: 80px;
-      width: 80px;
-      background-color: #fff;
-      margin: 0 20px;
-      border-radius: 50%;
-      box-shadow: 0 5px 45px rgba(0, 0, 0, 0.2), inset 0 0 15px #767574, inset 0 0 15px #767574;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .pupil {
-      position: absolute;
-      width: 30px;
-      height: 30px;
-      background: rgb(40,140,220);
-      border-radius: 50%;
-      border: 1px solid #000;
-      transition: transform 0.05s linear;
-    }
-  </style>
-  <div class="container">
-    <div class="eye">
-      <div class="pupil"></div>
-    </div>
-    <div class="eye">
-      <div class="pupil"></div>
-    </div>
-  </div>
-  <script>
-    document.addEventListener("mousemove", (event) => {
-      const eyes = document.querySelectorAll(".eye");
-      eyes.forEach((eye) => {
-        const pupil = eye.querySelector(".pupil");
-        const bounds = eye.getBoundingClientRect();
-        const eyeCenterX = bounds.left + bounds.width / 2;
-        const eyeCenterY = bounds.top + bounds.height / 2;
-        const dx = event.clientX - eyeCenterX;
-        const dy = event.clientY - eyeCenterY;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        
-        // Limit pupil movement within eye boundary
-        const maxMove = 20;
-        const angle = Math.atan2(dy, dx);
-        const moveX = Math.cos(angle) * Math.min(distance, maxMove);
-        const moveY = Math.sin(angle) * Math.min(distance, maxMove);
-        pupil.style.transform = `translate(${moveX}px, ${moveY}px)`;
-      });
-    });
-  </script>
 </body>
 </html>
 
